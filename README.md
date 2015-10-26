@@ -7,7 +7,7 @@ Traintracks has a simple API endpoint for your client to send events to.
 To send, you will:
 
 1. Assemble a JSON array of JSON objects, each of which represent one event.
-2. HTTP POST this JSON array to your friendly neighborhood traintracks endpoint (ex: api.traintracks.io/v1/events).
+2. HTTP POST this JSON array to your friendly neighborhood traintracks endpoint (ex: https://api.traintracks.io/v1/events).
 3. The HTTP headers should contain "Remote-Address: 1.2.3.4” to associate an IP Address with your event batch (1.2.3.4 will do if you don’t have that information).
 4. The HTTP headers should also contain two more headers:
   * X-Product-Key 
