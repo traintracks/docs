@@ -34,19 +34,19 @@ Our format is a JSON array of JSON objects. Each JSON object should have the fol
   ```javascript
   {
     "data": {
-      "winner": {
+      "sender": {
         "name": "JaneDoe",
-        "experiencePoints": "500",
-        "weapon": "Ragnarok",
+        "reputation": "500",
+        "message": "Hello",
         "money": 2350
       },
-      "loser": {
+      "receiver": {
         "name": "Action888",
-        "experiencePoints": "200",
-        "weapon": "Buster Sword",
+        "reputation": "200",
+        "message": "Hi",
         "money": 1200
       },
-      "battleTime": 52030
+      "sent": 52030
     }
   }
   ```
@@ -61,7 +61,7 @@ Our format is a JSON array of JSON objects. Each JSON object should have the fol
   * ex: "3dc6b97d-7388-11e4-bfb3-b8e8563b3f9a"
 7. userName
   * a userName string that uniquely identifies the user
-  * ex: "typicalGamer2000"
+  * ex: "janeDoe"
 8. sessionId
   * a UUID1 string that represents the current session of the user
   * ex: "fff324c6-30a2-11e3-ad80-485d60066bda"
@@ -94,22 +94,21 @@ Here is an example of a JSON array batch of 2 events you can send to our API:
     "build": "1.1.1",
     "clientTimestamp": "2012-03-14T02:33:42.416587-07:00",
     "data": {
-      "winner": {
+      "sender": {
         "name": "JaneDoe",
-        "experiencePoints": "500",
-        "weapon": "Ragnarok",
+        "reputation": "500",
+        "message": "Thanks for the recommendation",
         "money": 2350
       },
-      "loser": {
+      "receiver": {
         "name": "Action888",
-        "experiencePoints": "200",
-        "weapon": "Buster Sword",
+        "reputation": "200",
         "money": 1200
       },
-      "battleTime": 52030
+      "sent": 52030
     },
     "device": "iPhone 5S",
-    "eventType": "sword_battle",
+    "eventType": "transaction",
     "userId": "3dc6b97d-7388-11e4-bfb3-b8e8563b3f9a",
     "userName": "JaneDoe",
     "sessionId": "fff324c6-30a2-11e3-ad80-485d60066bda",
@@ -123,13 +122,13 @@ Here is an example of a JSON array batch of 2 events you can send to our API:
     "clientTimestamp": "2012-03-14T02:43:43.416587-07:00",
     "data": {
       "user": {
-        "experiencePoints": 500,
+        "reputation": 500,
         "money": 2326
       },
       "item": {
-        "name": "Excalibur",
+        "name": "Rayban",
         "cost": 24,
-        "type": "sword"
+        "type": "glasses"
       }
     },
     "device": "iPhone 5S",
